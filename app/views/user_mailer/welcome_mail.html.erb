@@ -1,0 +1,18 @@
+<h1> Welcome Email To the <%= @user.name %> </h1>
+<h3> Your Details is as follows </h3>
+<table class="table-bordered table-hover">
+    <tr>
+        <th> User ID </th>
+        <th> Name </th>
+        <th> Age </th>
+        <th> Email </th>
+        <th> Address </th>
+    </tr>
+    <tr>
+        <td> <%= @user.uid%> </td>
+        <td> <%= @user.name%> </td>
+        <td> <%= @user.age%> </td>
+        <td> <%= @user.email%> </td>
+        <td> <%= @user.address%> </td>
+    </tr>
+</table>

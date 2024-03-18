@@ -1,0 +1,27 @@
+<h1 class="text-center mt-3">Users List</h1><br>
+<table class="table table-bordered text-center">
+    <tr>
+        <th> User ID </th>
+        <th> Name </th>
+        <th> Age </th>
+        <th> Email </th>
+        <th> Address </th>
+    </tr>
+    <% @users.each do |user|%>
+        <tr>
+            <td> <%= link_to user.uid , user%> </td>
+            <td><%= user.name %></td>
+            <td><%= user.age %></td>
+            <td><%= user.email %></td>
+            <td><%= user.address %></td>
+        </tr>
+    <% end %>
+</table>
+
+<div class="text-center">
+<%= link_to "New User" , new_user_path , class:"btn btn-primary btn-lg"%>
+</div><br>
+
+<div class="pagination justify-content-center">
+<%= paginate @users %>
+</div>

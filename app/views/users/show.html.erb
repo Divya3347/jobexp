@@ -1,0 +1,17 @@
+<div class="text-center">
+    <h1>User Details</h1>
+    User ID : <%= @user.uid %><br>
+    Name : <%= @user.name %><br>
+    Age : <%= @user.age %><br>
+    Email : <%= @user.email %><br>
+    Address : <%= @user.address %><br><br>
+</div>
+
+<div class="d-flex justify-content-around">
+    <%= link_to "Edit User" , edit_user_path , class:"btn btn-warning"%><br><br>
+    <%= link_to "Destroy User" , user_path , data:{
+        turbo_method: :delete,
+        turbo_confirm:"Are you sure?"
+    }, class:"btn btn-danger"%><br><br>
+    <%= link_to "View All" , root_path , class:"btn btn-primary" %>
+</div>
